@@ -1,0 +1,168 @@
+"use client"
+
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { FadeInUp } from "@/components/scroll-animation"
+import { Button } from "@/components/ui/button"
+import { MessageCircle, Users, BookOpen, Calendar, Github, Slack } from "lucide-react"
+
+export default function CommunityPage() {
+  return (
+    <div className="min-h-screen bg-[#f5f3f0]">
+      <Header />
+
+      {/* Hero Section */}
+      <section className="px-6 py-24">
+        <div className="max-w-4xl mx-auto text-center">
+          <FadeInUp>
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Join Our Community</h1>
+            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+              Connect with fellow engineers, share best practices, and learn from the experiences of teams using
+              Resolve.ai in production.
+            </p>
+            <Button className="bg-[#c4f82a] text-gray-900 hover:bg-[#b8e625] font-medium px-8 py-3">
+              Join Discord
+            </Button>
+          </FadeInUp>
+        </div>
+      </section>
+
+      {/* Community Stats */}
+      <section className="px-6 py-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <FadeInUp>
+            <div className="grid md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">5,000+</div>
+                <div className="text-gray-600">Community Members</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">500+</div>
+                <div className="text-gray-600">Companies</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">50+</div>
+                <div className="text-gray-600">Countries</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-gray-900 mb-2">24/7</div>
+                <div className="text-gray-600">Support</div>
+              </div>
+            </div>
+          </FadeInUp>
+        </div>
+      </section>
+
+      {/* Community Channels */}
+      <section className="px-6 py-24">
+        <div className="max-w-7xl mx-auto">
+          <FadeInUp className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Connect With Us</h2>
+            <p className="text-xl text-gray-600">Multiple ways to engage with our community</p>
+          </FadeInUp>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: MessageCircle,
+                title: "Discord Server",
+                description: "Real-time chat with engineers and our team",
+                action: "Join Discord",
+                color: "bg-purple-500",
+              },
+              {
+                icon: Slack,
+                title: "Slack Community",
+                description: "Professional discussions and networking",
+                action: "Join Slack",
+                color: "bg-green-500",
+              },
+              {
+                icon: Github,
+                title: "GitHub",
+                description: "Contribute to open source projects",
+                action: "View GitHub",
+                color: "bg-gray-800",
+              },
+              {
+                icon: BookOpen,
+                title: "Documentation",
+                description: "Comprehensive guides and tutorials",
+                action: "Read Docs",
+                color: "bg-blue-500",
+              },
+              {
+                icon: Calendar,
+                title: "Events",
+                description: "Webinars, workshops, and meetups",
+                action: "View Events",
+                color: "bg-red-500",
+              },
+              {
+                icon: Users,
+                title: "User Groups",
+                description: "Local meetups and user groups",
+                action: "Find Groups",
+                color: "bg-yellow-500",
+              },
+            ].map((channel, index) => (
+              <FadeInUp key={index} delay={index * 0.1}>
+                <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  <div
+                    className={`w-16 h-16 ${channel.color} rounded-full flex items-center justify-center mx-auto mb-4`}
+                  >
+                    <channel.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 text-center">{channel.title}</h3>
+                  <p className="text-gray-600 mb-6 text-center">{channel.description}</p>
+                  <Button variant="outline" className="w-full border-gray-300 hover:bg-gray-50 bg-transparent">
+                    {channel.action}
+                  </Button>
+                </div>
+              </FadeInUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Content */}
+      <section className="px-6 py-16 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <FadeInUp className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Community Highlights</h2>
+          </FadeInUp>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Best Practices Guide",
+                description: "Community-contributed guide to incident response",
+                author: "Sarah Chen, DevOps Lead",
+              },
+              {
+                title: "Integration Showcase",
+                description: "How teams are using Resolve.ai with their existing tools",
+                author: "Mike Rodriguez, SRE",
+              },
+              {
+                title: "Success Stories",
+                description: "Real stories from teams who've transformed their operations",
+                author: "Community Contributors",
+              },
+            ].map((content, index) => (
+              <FadeInUp key={index} delay={index * 0.1}>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{content.title}</h3>
+                  <p className="text-gray-600 mb-4">{content.description}</p>
+                  <p className="text-sm text-gray-500">By {content.author}</p>
+                </div>
+              </FadeInUp>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  )
+}

@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Globe, Shield, TrendingUp, Users, ArrowRight, Play, FileText } from "lucide-react"
+import { Globe, Shield, TrendingUp, Users, ArrowRight, Play, FileText, User } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FadeInUp, SlideInLeft } from "@/components/scroll-animation"
@@ -263,9 +263,9 @@ export default function HomePage() {
                 <div className="space-y-3">
                   {[
                     {
-                      title: "Tax & Compliance",
-                      description: "ITR filing, TDS management, DTAA benefits",
-                      response: "I can help you with comprehensive tax services including Indian Income Tax Returns, TDS optimization, and leveraging DTAA benefits for tax savings. Our expert team handles multi-jurisdictional compliance to ensure you're always compliant while minimizing your tax liability."
+                      title: "Income Tax Return Filing",
+                      description: "ITR filing with DTAA benefits",
+                      response: "Our ITR filing service includes comprehensive tax return preparation for NRIs with income in India. We handle all documentation, ensure DTAA benefits, and manage your tax obligations efficiently."
                     },
                     {
                       title: "Investment Management", 
@@ -273,9 +273,9 @@ export default function HomePage() {
                       response: "Let me guide you through our investment services! We offer diversified portfolio management including mutual funds, SIPs, PMS, and retirement planning specifically designed for NRIs. Our certified advisors help optimize your investments while ensuring tax efficiency and regulatory compliance."
                     },
                     {
-                      title: "Document Processing",
+                      title: "Document Procurement",
                       description: "PAN, OCI, passport, banking services", 
-                      response: "I can streamline all your document needs! From PAN card applications and OCI renewals to passport services and banking documentation - we handle everything remotely. Our digital-first approach ensures fast processing with complete accuracy and compliance."
+                      response: "Our document procurement services include PAN card applications, OCI card processing, passport renewal, and NRE/NRO bank account opening with minimal paperwork from your end."
                     },
                     {
                       title: "Property Management",
@@ -283,8 +283,8 @@ export default function HomePage() {
                       response: "Managing property from abroad is complex, but I'm here to help! We provide end-to-end property management including tenant relations, rent collection, legal dispute resolution, and maintenance coordination. Our local network ensures your property interests are protected."
                     },
                     {
-                      title: "Estate Planning",
-                      description: "Wills, succession planning, family support",
+                      title: "Estate Planning & Succession",
+                      description: "Will drafting & POA guidance",
                       response: "Estate planning for NRIs involves unique cross-border considerations. I can help you with will drafting, succession planning, power of attorney guidance, and comprehensive family support services to ensure smooth asset transfer and family care coordination."
                     }
                   ].map((service, index) => (
@@ -299,7 +299,9 @@ export default function HomePage() {
                             <p className="text-sm text-gray-800">${service.title}</p>
                           </div>
                           <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <span className="text-gray-600 text-sm font-bold">You</span>
+                            <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                            </svg>
                           </div>
                         `;
                         messagesContainer.appendChild(userMessage);
@@ -469,32 +471,32 @@ export default function HomePage() {
 
           {/* Tax & Regulatory Compliance */}
           <FadeInUp className="mb-8">
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-2xl p-8 shadow-lg">
+            <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
               <div className="flex flex-col lg:flex-row items-center gap-8">
-                <div className="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-24 h-24 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <img src="/tax.png" alt="Tax & Compliance" className="w-16 h-16" />
                 </div>
                 <div className="flex-1 text-center lg:text-left">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Tax & Regulatory Compliance</h3>
-                  <p className="text-lg text-gray-700 mb-6">
+                  <h3 className="text-3xl font-bold text-white mb-4">Tax & Regulatory Compliance</h3>
+                  <p className="text-lg text-white mb-6">
                     Comprehensive tax management for NRIs across multiple jurisdictions. From ITR filing to DTAA benefits, 
                     we ensure complete compliance with Indian and international tax regulations.
                   </p>
-                  <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+                  <div className="grid md:grid-cols-2 gap-4 text-sm text-white">
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>Indian Income Tax Returns (ITR)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>Cross-border Tax Planning</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>TDS Management & Refunds</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>DTAA Benefits & Compliance</span>
                     </div>
                   </div>
@@ -505,32 +507,32 @@ export default function HomePage() {
 
           {/* Investment Management */}
           <FadeInUp className="mb-8" delay={0.1}>
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-2xl p-8 shadow-lg">
+            <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
               <div className="flex flex-col lg:flex-row items-center gap-8">
-                <div className="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-24 h-24 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <img src="/investment-management.png" alt="Investment Management" className="w-16 h-16" />
                 </div>
                 <div className="flex-1 text-center lg:text-left">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Investment Management</h3>
-                  <p className="text-lg text-gray-700 mb-6">
+                  <h3 className="text-3xl font-bold text-white mb-4">Investment Management</h3>
+                  <p className="text-lg text-white mb-6">
                     Professional portfolio management and diversified investment solutions tailored for NRI needs 
                     with expert guidance and compliance support.
                   </p>
-                  <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+                  <div className="grid md:grid-cols-2 gap-4 text-sm text-white">
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>Mutual Funds & SIP Management</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>Portfolio Management Services (PMS)</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>Retirement & Wealth Planning</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>Bonds & Fixed Income Securities</span>
                     </div>
                   </div>
@@ -541,32 +543,32 @@ export default function HomePage() {
 
           {/* Document Processing */}
           <FadeInUp delay={0.2}>
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-2xl p-8 shadow-lg">
+            <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
               <div className="flex flex-col lg:flex-row items-center gap-8">
-                <div className="w-24 h-24 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-24 h-24 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <img src="/banking.png" alt="Document Processing" className="w-16 h-16" />
                 </div>
                 <div className="flex-1 text-center lg:text-left">
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">Document Processing</h3>
-                  <p className="text-lg text-gray-700 mb-6">
+                  <h3 className="text-3xl font-bold text-white mb-4">Document Processing</h3>
+                  <p className="text-lg text-white mb-6">
                     Streamlined document procurement and processing services for all your official requirements, 
                     handled remotely with complete accuracy and compliance.
                   </p>
-                  <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+                  <div className="grid md:grid-cols-2 gap-4 text-sm text-white">
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>PAN Card Applications & Updates</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>OCI & Passport Services</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>Banking & Account Services</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
                       <span>Attestation & Legalization</span>
                     </div>
                   </div>
@@ -663,12 +665,12 @@ export default function HomePage() {
               Join thousands of NRIs who trust mySevak as their comprehensive remote concierge for all Indian affairs
             </p>
             <div className="flex gap-4 justify-center">
-              <Button className="bg-white text-yellow-600 hover:bg-gray-100 font-medium px-8 py-3">
+              <Button className="bg-white text-black hover:bg-gray-100 font-medium px-8 py-3">
                 Schedule Consultation
               </Button>
               <Button
                 variant="outline"
-                className="border-white text-white hover:bg-white/10 px-8 py-3"
+                className="border-white text-black hover:bg-white/10 px-8 py-3"
               >
                 Download Guide
               </Button>

@@ -28,9 +28,6 @@ export function Header() {
           <Link href="/blog" className="text-gray-700 hover:text-yellow-600 transition-colors">
             Resources
           </Link>
-          <Link href="/community" className="text-gray-700 hover:text-yellow-600 transition-colors">
-            Community
-          </Link>
         </div>
 
         <div className="flex items-center gap-4">
@@ -63,9 +60,6 @@ export function Header() {
               </Link>
               <Link href="/blog" className="block text-gray-700 hover:text-yellow-600">
                 Resources
-              </Link>
-              <Link href="/community" className="block text-gray-700 hover:text-yellow-600">
-                Community
               </Link>
             </div>
           </motion.div>

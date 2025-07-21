@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Chart/graph display -->
+  <rect x="100" y="100" width="200" height="150" fill="#F5E6D3" stroke="#D4A574" stroke-width="3" rx="8"/>
+  <rect x="110" y="80" width="20" height="30" fill="#D4A574" rx="10"/>
+  
+  <!-- Bar chart -->
+  <rect x="130" y="200" width="20" height="30" fill="#8FBC8F"/>
+  <rect x="160" y="180" width="20" height="50" fill="#F5C842"/>
+  <rect x="190" y="160" width="20" height="70" fill="#D4A574"/>
+  
+  <!-- Arrow pointing up -->
+  <path d="M 240 140 L 260 120 L 280 140 L 270 140 L 270 200 L 250 200 L 250 140 Z" fill="#8FBC8F"/>
+  
+  <!-- Coins -->
+  <circle cx="150" cy="320" r="25" fill="#F5C842"/>
+  <path d="M 140 315 Q 150 305 160 315 Q 150 325 140 315" stroke="#B8732F" stroke-width="2" fill="none"/>
+  <line x1="145" y1="320" x2="145" y2="330" stroke="#B8732F" stroke-width="2"/>
+  <line x1="155" y1="310" x2="155" y2="320" stroke="#B8732F" stroke-width="2"/>
+  
+  <circle cx="220" cy="340" r="20" fill="#F5C842"/>
+  <text x="220" y="347" text-anchor="middle" fill="#B8732F" font-family="Arial, sans-serif" font-size="16" font-weight="bold">$</text>
+</svg>

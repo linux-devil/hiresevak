@@ -474,7 +474,7 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Left Side - Service Details */}
-                <div className="flex flex-col">
+                <div className="flex flex-col lg:order-1">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-20 h-20 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <img src="/tax.png" alt="Tax & Compliance" className="w-12 h-12" />
@@ -512,7 +512,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Side - Interactive Interface */}
-                <div className="bg-slate-800 rounded-xl p-6">
+                <div className="bg-slate-800 rounded-xl p-6 lg:order-2">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
                       <span className="text-black text-sm font-bold">S</span>
@@ -658,7 +658,7 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Left Side - Service Details */}
-                <div className="flex flex-col">
+                <div className="flex flex-col lg:order-2">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-20 h-20 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <img src="/investment-management.png" alt="Investment Management" className="w-12 h-12" />
@@ -696,7 +696,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Side - Interactive Interface */}
-                <div className="bg-slate-800 rounded-xl p-6">
+                <div className="bg-slate-800 rounded-xl p-6 lg:order-1">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
                       <span className="text-black text-sm font-bold">S</span>
@@ -842,7 +842,7 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Left Side - Service Details */}
-                <div className="flex flex-col">
+                <div className="flex flex-col lg:order-1">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-20 h-20 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <FileText className="w-12 h-12 text-white" />
@@ -880,7 +880,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Side - Interactive Interface */}
-                <div className="bg-slate-800 rounded-xl p-6">
+                <div className="bg-slate-800 rounded-xl p-6 lg:order-2">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
                       <span className="text-black text-sm font-bold">S</span>
@@ -1026,7 +1026,7 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Left Side - Service Details */}
-                <div className="flex flex-col">
+                <div className="flex flex-col lg:order-2">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-20 h-20 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
                       <img src="/banking.png" alt="Document Procurement" className="w-12 h-12" />
@@ -1064,7 +1064,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Right Side - Interactive Interface */}
-                <div className="bg-slate-800 rounded-xl p-6">
+                <div className="bg-slate-800 rounded-xl p-6 lg:order-1">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
                       <span className="text-black text-sm font-bold">S</span>
@@ -1208,78 +1208,6 @@ export default function HomePage() {
       </section>
 
 
-      {/* Services Section */}
-      <section className="px-6 py-24 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <FadeInUp className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Your Complete Remote Management Journey</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From initial consultation to ongoing management, we handle every aspect of your Indian affairs 
-              with professional expertise and cutting-edge digital solutions
-            </p>
-          </FadeInUp>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <FadeInUp delay={0.1}>
-              <div className="border border-gray-200 rounded-xl p-8 hover:border-yellow-200 transition-colors h-full flex flex-col">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48" className="text-yellow-600">
-                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
-                      <path d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4S4 12.954 4 24s8.954 20 20 20" clip-rule="evenodd"/>
-                      <path d="M4 24h40"/>
-                      <path d="M24 44c4.418 0 8-8.954 8-20S28.418 4 24 4s-8 8.954-8 20s3.582 20 8 20" clip-rule="evenodd"/>
-                      <path d="M9.858 10.142A19.94 19.94 0 0 0 24 16a19.94 19.94 0 0 0 14.142-5.858m0 27.716A19.94 19.94 0 0 0 24 32a19.94 19.94 0 0 0-14.142 5.858"/>
-                    </g>
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Discovery & Assessment</h3>
-                <p className="text-gray-600 mb-4 flex-1">
-                  Comprehensive evaluation of all your Indian affairs including financial, legal, and personal requirements
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Complete needs assessment across all service areas</li>
-                  <li>• Priority mapping and timeline creation</li>
-                  <li>• Dedicated relationship manager assignment</li>
-                </ul>
-              </div>
-            </FadeInUp>
-
-            <FadeInUp delay={0.2}>
-              <div className="border border-gray-200 rounded-xl p-8 hover:border-yellow-200 transition-colors h-full flex flex-col">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-yellow-600 font-bold">02</span>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Digital Execution</h3>
-                <p className="text-gray-600 mb-4 flex-1">
-                  Professional handling of all tasks through secure digital channels and trusted local networks
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 100% digital processing where possible</li>
-                  <li>• Trusted local team for on-ground requirements</li>
-                  <li>• Real-time updates and progress tracking</li>
-                </ul>
-              </div>
-            </FadeInUp>
-
-            <FadeInUp delay={0.3}>
-              <div className="border border-gray-200 rounded-xl p-8 hover:border-yellow-200 transition-colors h-full flex flex-col">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-yellow-600 font-bold">03</span>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Ongoing Management</h3>
-                <p className="text-gray-600 mb-4 flex-1">
-                  Continuous monitoring, proactive updates, and strategic guidance across all your Indian interests
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Proactive monitoring and maintenance</li>
-                  <li>• Regular review and optimization</li>
-                  <li>• 24/7 support and emergency assistance</li>
-                </ul>
-              </div>
-            </FadeInUp>
-          </div>
-        </div>
-      </section>
 
 
       {/* CTA Section */}

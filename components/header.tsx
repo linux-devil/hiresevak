@@ -15,7 +15,7 @@ export function Header() {
           <div className="w-8 h-8 bg-yellow-500 rounded-sm flex items-center justify-center">
             <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
           </div>
-          <span className="text-xl font-semibold text-gray-900">mySevak</span>
+          <span className="text-xl font-semibold text-gray-900">Sevak</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

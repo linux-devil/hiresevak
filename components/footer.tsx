@@ -12,7 +12,7 @@ export function Footer() {
                 <div className="w-8 h-8 bg-yellow-500 rounded-sm flex items-center justify-center">
                   <div className="w-4 h-4 bg-white rounded-sm transform rotate-45"></div>
                 </div>
-                <span className="text-xl font-semibold">mySevak</span>
+                <span className="text-xl font-semibold">Sevak</span>
               </div>
               <p className="text-gray-400">
                 Comprehensive remote concierge services for Non-Resident Indians, bridging geographical 
@@ -76,7 +76,7 @@ export function Footer() {
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 mySevak. All rights reserved.</p>
+            <p>&copy; 2024 Sevak. All rights reserved.</p>
           </div>
         </FadeInUp>
       </div>

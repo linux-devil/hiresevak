@@ -170,7 +170,7 @@ export default function HomePage() {
             <div className="relative bg-white rounded-lg shadow-2xl overflow-hidden">
               <Image
                 src="/dashboard-mockup.png"
-                alt="mySevak NRI Tax & Compliance Dashboard"
+                alt="Sevak NRI Tax & Compliance Dashboard"
                 width={600}
                 height={400}
                 className="w-full h-auto"
@@ -225,7 +225,7 @@ export default function HomePage() {
               <div className="bg-gray-50 rounded-2xl p-6 h-[500px]">
                 <div className="bg-white rounded-xl h-full shadow-inner">
                   <div className="bg-yellow-100 text-black px-6 py-4 rounded-t-xl border-b border-yellow-200">
-                    <h3 className="font-semibold">mySevak AI Assistant</h3>
+                    <h3 className="font-semibold">Sevak AI Assistant</h3>
                     <p className="text-sm text-gray-700">Ask me anything about our services</p>
                   </div>
                   <div id="chatMessages" className="p-4 h-80 overflow-y-auto space-y-4">
@@ -234,7 +234,7 @@ export default function HomePage() {
                         <span className="text-white text-sm font-bold">AI</span>
                       </div>
                       <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
-                        <p className="text-sm text-gray-800">Hello! I'm your mySevak assistant. Click on any service on the right to learn more about how I can help you.</p>
+                        <p className="text-sm text-gray-800">Hello! I'm your Sevak assistant. Click on any service on the right to learn more about how I can help you.</p>
                       </div>
                     </div>
                     <div id="dynamicMessages" className="space-y-4"></div>
@@ -471,183 +471,37 @@ export default function HomePage() {
 
           {/* Tax & Regulatory Compliance */}
           <FadeInUp className="mb-8">
-            <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Left Side - Service Details */}
-                <div className="flex flex-col lg:order-1">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-20 h-20 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img src="/tax.png" alt="Tax & Compliance" className="w-12 h-12" />
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-white mb-2">Tax & Regulatory Compliance</h3>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-white mb-6">
-                    We provide comprehensive tax and regulatory compliance services for NRIs, ensuring you stay compliant with Indian tax laws while maximizing your tax benefits.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">Residential Status Determination</h4>
-                      <p className="text-sm text-white">Expert guidance on determining your residential status for tax purposes</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">ITR Filing (India & Cross-Border)</h4>
-                      <p className="text-sm text-white">Comprehensive income tax return filing for all your global income</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">DTAA Benefits & Tax Planning</h4>
-                      <p className="text-sm text-white">Maximize tax benefits through Double Taxation Avoidance Agreements</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">FEMA/RBI Consultancy</h4>
-                      <p className="text-sm text-white">Expert advice on FEMA regulations and RBI guidelines for NRIs</p>
-                    </div>
-                  </div>
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-6 mb-6">
+                <div className="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <img src="/tax.png" alt="Tax & Compliance" className="w-10 h-10" />
                 </div>
-
-                {/* Right Side - Interactive Interface */}
-                <div className="bg-slate-800 rounded-xl p-6 lg:order-2">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                      <span className="text-black text-sm font-bold">S</span>
-                    </div>
-                    <h4 className="font-semibold text-white">Ask Sevak about Tax Compliance</h4>
-                  </div>
-                  
-                  <div className="bg-slate-700 rounded-lg p-4 mb-4 h-[200px] overflow-y-auto">
-                    <div id="taxChatMessages" className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-black text-xs font-bold">S</span>
-                        </div>
-                        <div className="bg-slate-600 rounded-lg p-3 max-w-xs">
-                          <p className="text-sm text-white">Hi! I'm here to help with your tax compliance questions. What would you like to know?</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('taxChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">How do I determine my residential status?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">Your residential status depends on the number of days you stay in India. We analyze your travel patterns and provide expert guidance on whether you qualify as Resident, Non-Resident, or Resident but Not Ordinarily Resident (RNOR).</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      How do I determine my residential status?
-                    </button>
-                    
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('taxChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">What are DTAA benefits?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">DTAA (Double Taxation Avoidance Agreement) prevents you from paying tax on the same income in both countries. We help you claim these benefits to reduce your overall tax liability and ensure proper credit for taxes paid abroad.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      What are DTAA benefits?
-                    </button>
-                    
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('taxChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">Do I need FEMA compliance?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">Yes, as an NRI you need to comply with FEMA regulations for foreign exchange transactions, property purchases, investments, and fund transfers. We ensure all your transactions are FEMA compliant and guide you through RBI guidelines.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      Do I need FEMA compliance?
-                    </button>
-                  </div>
+                <h3 className="text-3xl font-bold text-black">Tax & Regulatory Compliance</h3>
+              </div>
+              
+              <p className="text-lg text-black mb-8 max-w-4xl">
+                We provide comprehensive tax and regulatory compliance services for NRIs, ensuring you stay compliant with Indian tax laws while maximizing your tax benefits.
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">Residential Status Determination</h4>
+                  <p className="text-sm text-black">Expert guidance on determining your residential status for tax purposes</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">ITR Filing (India & Cross-Border)</h4>
+                  <p className="text-sm text-black">Comprehensive income tax return filing for all your global income</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">DTAA Benefits & Tax Planning</h4>
+                  <p className="text-sm text-black">Maximize tax benefits through Double Taxation Avoidance Agreements</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">FEMA/RBI Consultancy</h4>
+                  <p className="text-sm text-black">Expert advice on FEMA regulations and RBI guidelines for NRIs</p>
                 </div>
               </div>
             </div>
@@ -655,367 +509,75 @@ export default function HomePage() {
 
           {/* Investment Management */}
           <FadeInUp className="mb-8" delay={0.1}>
-            <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Left Side - Service Details */}
-                <div className="flex flex-col lg:order-2">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-20 h-20 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img src="/investment-management.png" alt="Investment Management" className="w-12 h-12" />
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-white mb-2">Investment Management</h3>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-white mb-6">
-                    Grow your wealth with our specialized investment solutions designed for NRIs, offering diverse options across multiple asset classes.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">Mutual Fund Investments</h4>
-                      <p className="text-sm text-white">Curated mutual fund portfolios for NRIs with different risk profiles</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">Portfolio Management Services</h4>
-                      <p className="text-sm text-white">Professionally managed investment portfolios tailored to your goals</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">GIFT City Funds</h4>
-                      <p className="text-sm text-white">Access to exclusive investment opportunities in Gujarat International Finance Tec-City</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">Retirement Planning</h4>
-                      <p className="text-sm text-white">Long-term investment strategies for a secure retirement</p>
-                    </div>
-                  </div>
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-6 mb-6">
+                <div className="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <img src="/investment-management.png" alt="Investment Management" className="w-10 h-10" />
                 </div>
-
-                {/* Right Side - Interactive Interface */}
-                <div className="bg-slate-800 rounded-xl p-6 lg:order-1">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                      <span className="text-black text-sm font-bold">S</span>
-                    </div>
-                    <h4 className="font-semibold text-white">Ask Sevak about Investments</h4>
-                  </div>
-                  
-                  <div className="bg-slate-700 rounded-lg p-4 mb-4 h-[200px] overflow-y-auto">
-                    <div id="investmentChatMessages" className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-black text-xs font-bold">S</span>
-                        </div>
-                        <div className="bg-slate-600 rounded-lg p-3 max-w-xs">
-                          <p className="text-sm text-white">Hi! I'm here to help with your investment questions. What would you like to know?</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('investmentChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">What are the best investment options for NRIs?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">For NRIs, we recommend a diversified approach including mutual funds through SIPs, PMS for higher amounts, GIFT City funds for tax advantages, and NRE/NRO fixed deposits. The best mix depends on your risk profile, investment horizon, and financial goals.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      What are the best investment options for NRIs?
-                    </button>
-                    
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('investmentChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">Tell me about GIFT City investment opportunities</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">GIFT City offers unique investment opportunities including offshore funds, alternative investments, and structured products with tax advantages. As an International Financial Services Center, it provides access to global markets with regulatory benefits for NRI investors.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      Tell me about GIFT City investment opportunities
-                    </button>
-                    
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('investmentChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">How can I plan for retirement as an NRI?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">Retirement planning for NRIs requires a dual-country approach. We help create diversified portfolios across India and your resident country, including EPF transfers, NPS contributions, systematic withdrawal plans, and tax-efficient asset allocation for your golden years.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      How can I plan for retirement as an NRI?
-                    </button>
-                  </div>
+                <h3 className="text-3xl font-bold text-black">Investment Management</h3>
+              </div>
+              
+              <p className="text-lg text-black mb-8 max-w-4xl">
+                Grow your wealth with our specialized investment solutions designed for NRIs, offering diverse options across multiple asset classes and jurisdictions.
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">Mutual Fund Investments</h4>
+                  <p className="text-sm text-black">Curated mutual fund portfolios for NRIs with different risk profiles and investment horizons</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">Portfolio Management Services</h4>
+                  <p className="text-sm text-black">Professionally managed investment portfolios tailored to your specific financial goals</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">GIFT City Funds</h4>
+                  <p className="text-sm text-black">Access to exclusive investment opportunities in Gujarat International Finance Tec-City</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">Retirement Planning</h4>
+                  <p className="text-sm text-black">Long-term investment strategies for a secure and comfortable retirement</p>
                 </div>
               </div>
             </div>
           </FadeInUp>
 
-          {/* Estate Planning */}
+          {/* Estate Planning & Succession */}
           <FadeInUp delay={0.2}>
-            <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Left Side - Service Details */}
-                <div className="flex flex-col lg:order-1">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-20 h-20 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <FileText className="w-12 h-12 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-white mb-2">Estate Planning & Succession</h3>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-white mb-6">
-                    Secure your family's future with our comprehensive estate planning services designed specifically for NRIs with assets in India.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">Will Drafting (India & Cross-Border)</h4>
-                      <p className="text-sm text-white">Legally sound wills that are valid across jurisdictions</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">Power of Attorney Guidance</h4>
-                      <p className="text-sm text-white">Expert advice on setting up and managing POAs for your assets in India</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">Nomination & Beneficiary Planning</h4>
-                      <p className="text-sm text-white">Strategic nomination planning for all your financial assets</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">Professional Executor Services</h4>
-                      <p className="text-sm text-white">Reliable execution of your will and estate plans</p>
-                    </div>
-                  </div>
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-6 mb-6">
+                <div className="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <FileText className="w-10 h-10 text-black" />
                 </div>
-
-                {/* Right Side - Interactive Interface */}
-                <div className="bg-slate-800 rounded-xl p-6 lg:order-2">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                      <span className="text-black text-sm font-bold">S</span>
-                    </div>
-                    <h4 className="font-semibold text-white">Ask Sevak about Estate Planning</h4>
-                  </div>
-                  
-                  <div className="bg-slate-700 rounded-lg p-4 mb-4 h-[200px] overflow-y-auto">
-                    <div id="estateChatMessages" className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-black text-xs font-bold">S</span>
-                        </div>
-                        <div className="bg-slate-600 rounded-lg p-3 max-w-xs">
-                          <p className="text-sm text-white">Hi! I'm here to help with your estate planning questions. What would you like to know?</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('estateChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">How do I create a will for my assets in India?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">Creating a will for Indian assets requires specific legal considerations. We help draft comprehensive wills that comply with Indian succession laws, include all your assets (property, investments, bank accounts), appoint suitable executors, and ensure proper registration for legal validity.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      How do I create a will for my assets in India?
-                    </button>
-                    
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('estateChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">What is the difference between a general and special POA?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">A General POA gives broad authority to handle all your affairs, while a Special POA is limited to specific transactions or purposes. For NRIs, we typically recommend Special POAs for property sales, bank operations, or tax matters, as they provide better control and security for your assets.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      What is the difference between a general and special POA?
-                    </button>
-                    
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('estateChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">How can I ensure my will is valid in both countries?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">Cross-border will validity requires careful legal structuring. We create separate wills for each country's assets or draft a single will that complies with both jurisdictions' laws. This includes proper witnessing, notarization, apostille certification, and registration to ensure enforceability in both countries.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      How can I ensure my will is valid in both countries?
-                    </button>
-                  </div>
+                <h3 className="text-3xl font-bold text-black">Estate Planning & Succession</h3>
+              </div>
+              
+              <p className="text-lg text-black mb-8 max-w-4xl">
+                Secure your family's future with our comprehensive estate planning services designed specifically for NRIs with cross-border assets and obligations.
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">Will Drafting (India & Cross-Border)</h4>
+                  <p className="text-sm text-black">Legally sound wills that are valid across multiple jurisdictions and compliant with local laws</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">Power of Attorney Guidance</h4>
+                  <p className="text-sm text-black">Expert advice on setting up and managing POAs for your assets and affairs in India</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">Nomination & Beneficiary Planning</h4>
+                  <p className="text-sm text-black">Strategic nomination planning for all your financial assets and investment accounts</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">Professional Executor Services</h4>
+                  <p className="text-sm text-black">Reliable and professional execution of your will and comprehensive estate plans</p>
                 </div>
               </div>
             </div>
@@ -1023,183 +585,37 @@ export default function HomePage() {
 
           {/* Document Procurement */}
           <FadeInUp delay={0.3}>
-            <div className="bg-gradient-to-br from-slate-600 to-slate-700 border-2 border-slate-500 rounded-2xl p-8 shadow-lg">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Left Side - Service Details */}
-                <div className="flex flex-col lg:order-2">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-20 h-20 bg-slate-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <img src="/banking.png" alt="Document Procurement" className="w-12 h-12" />
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-white mb-2">Document Procurement</h3>
-                    </div>
-                  </div>
-                  
-                  <p className="text-lg text-white mb-6">
-                    We handle all your document-related requirements in India, saving you time and eliminating the hassle of paperwork from abroad.
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">PAN Card Application/Update</h4>
-                      <p className="text-sm text-white">Hassle-free PAN card services for NRIs</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">OCI Card & Passport Renewal</h4>
-                      <p className="text-sm text-white">Assistance with OCI applications and passport renewals</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">NRE/NRO Bank Account Opening</h4>
-                      <p className="text-sm text-white">Streamlined process for opening NRI bank accounts</p>
-                    </div>
-                    
-                    <div>
-                      <h4 className="font-semibold text-yellow-400 mb-2">Document Legalization</h4>
-                      <p className="text-sm text-white">Authentication and legalization of documents for cross-border use</p>
-                    </div>
-                  </div>
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="flex items-center gap-6 mb-6">
+                <div className="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <img src="/banking.png" alt="Document Procurement" className="w-10 h-10" />
                 </div>
-
-                {/* Right Side - Interactive Interface */}
-                <div className="bg-slate-800 rounded-xl p-6 lg:order-1">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                      <span className="text-black text-sm font-bold">S</span>
-                    </div>
-                    <h4 className="font-semibold text-white">Ask Sevak about Documents</h4>
-                  </div>
-                  
-                  <div className="bg-slate-700 rounded-lg p-4 mb-4 h-[200px] overflow-y-auto">
-                    <div id="documentChatMessages" className="space-y-3">
-                      <div className="flex items-start gap-3">
-                        <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-black text-xs font-bold">S</span>
-                        </div>
-                        <div className="bg-slate-600 rounded-lg p-3 max-w-xs">
-                          <p className="text-sm text-white">Hi! I'm here to help with your document procurement questions. What would you like to know?</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('documentChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">How can I apply for an OCI card?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">We handle the complete OCI application process including document collection, form filling, submission to the appropriate consulate/embassy, and tracking until you receive your OCI card. We ensure all documents are properly attested and meet the current requirements.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      How can I apply for an OCI card?
-                    </button>
-                    
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('documentChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">What documents do I need to open an NRE account?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">For NRE account opening, you need: passport copy, visa, overseas address proof, salary certificate, NRI status proof, PAN card, and photographs. We coordinate with banks to ensure smooth account opening and handle all documentation requirements on your behalf.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      What documents do I need to open an NRE account?
-                    </button>
-                    
-                    <button 
-                      onClick={() => {
-                        const container = document.getElementById('documentChatMessages');
-                        const userMsg = document.createElement('div');
-                        userMsg.className = 'flex items-start gap-3 justify-end';
-                        userMsg.innerHTML = `
-                          <div class="bg-yellow-100 rounded-lg p-3 max-w-xs">
-                            <p class="text-sm text-gray-800">Can you help with PAN card application from abroad?</p>
-                          </div>
-                          <div class="w-6 h-6 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
-                            <svg class="w-3 h-3 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7-7h14a7 7 0 00-7-7z"/>
-                            </svg>
-                          </div>
-                        `;
-                        container.appendChild(userMsg);
-                        
-                        setTimeout(() => {
-                          const aiMsg = document.createElement('div');
-                          aiMsg.className = 'flex items-start gap-3';
-                          aiMsg.innerHTML = `
-                            <div class="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span class="text-black text-xs font-bold">S</span>
-                            </div>
-                            <div class="bg-slate-600 rounded-lg p-3 max-w-sm">
-                              <p class="text-sm text-white">Yes! We handle PAN card applications for NRIs through the online process and consulate submissions. Whether it's a new PAN application, correction, or reissue, we manage the entire process including document submission, tracking, and delivery to your overseas address.</p>
-                            </div>
-                          `;
-                          container.appendChild(aiMsg);
-                          const chatBox = container.parentElement;
-                          chatBox.scrollTop = chatBox.scrollHeight;
-                        }, 1000);
-                      }}
-                      className="w-full text-left p-3 bg-slate-600 hover:bg-slate-500 rounded-lg transition-colors text-sm text-white"
-                    >
-                      Can you help with PAN card application from abroad?
-                    </button>
-                  </div>
+                <h3 className="text-3xl font-bold text-black">Document Procurement</h3>
+              </div>
+              
+              <p className="text-lg text-black mb-8 max-w-4xl">
+                We handle all your document-related requirements in India, saving you time and eliminating the hassle of complex paperwork from abroad.
+              </p>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">PAN Card Application/Update</h4>
+                  <p className="text-sm text-black">Hassle-free PAN card services for NRIs including new applications and updates</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">OCI Card & Passport Renewal</h4>
+                  <p className="text-sm text-black">Complete assistance with OCI applications and Indian passport renewals</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">NRE/NRO Bank Account Opening</h4>
+                  <p className="text-sm text-black">Streamlined process for opening and managing NRI bank accounts</p>
+                </div>
+                
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                  <h4 className="font-semibold text-black mb-3">Document Legalization</h4>
+                  <p className="text-sm text-black">Authentication and legalization of documents for cross-border use</p>
                 </div>
               </div>
             </div>
@@ -1218,7 +634,7 @@ export default function HomePage() {
               Ready to Experience True Peace of Mind?
             </h2>
             <p className="text-xl text-black mb-8">
-              Join thousands of NRIs who trust mySevak as their comprehensive remote concierge for all Indian affairs
+              Join thousands of NRIs who trust Sevak as their comprehensive remote concierge for all Indian affairs
             </p>
             <div className="flex gap-4 justify-center">
               <Button className="bg-white text-black hover:bg-gray-100 font-medium px-8 py-3">

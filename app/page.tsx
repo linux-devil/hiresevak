@@ -472,24 +472,24 @@ export default function HomePage() {
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">Residential Status Determination</h4>
-                  <p className="text-sm text-black">Expert guidance on determining your residential status for tax purposes</p>
+                  <p className="text-sm text-black flex-1">Expert guidance on determining your residential status for tax purposes</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">ITR Filing (India & Cross-Border)</h4>
-                  <p className="text-sm text-black">Comprehensive income tax return filing for all your global income</p>
+                  <p className="text-sm text-black flex-1">Comprehensive income tax return filing for all your global income</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">DTAA Benefits & Tax Planning</h4>
-                  <p className="text-sm text-black">Maximize tax benefits through Double Taxation Avoidance Agreements</p>
+                  <p className="text-sm text-black flex-1">Maximize tax benefits through Double Taxation Avoidance Agreements</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">FEMA/RBI Consultancy</h4>
-                  <p className="text-sm text-black">Expert advice on FEMA regulations and RBI guidelines for NRIs</p>
+                  <p className="text-sm text-black flex-1">Expert advice on FEMA regulations and RBI guidelines for NRIs</p>
                 </div>
               </div>
             </div>
@@ -510,24 +510,24 @@ export default function HomePage() {
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">Mutual Fund Investments</h4>
-                  <p className="text-sm text-black">Curated mutual fund portfolios for NRIs with different risk profiles and investment horizons</p>
+                  <p className="text-sm text-black flex-1">Curated mutual fund portfolios for NRIs with different risk profiles and investment horizons</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">Portfolio Management Services</h4>
-                  <p className="text-sm text-black">Professionally managed investment portfolios tailored to your specific financial goals</p>
+                  <p className="text-sm text-black flex-1">Professionally managed investment portfolios tailored to your specific financial goals</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">GIFT City Funds</h4>
-                  <p className="text-sm text-black">Access to exclusive investment opportunities in Gujarat International Finance Tec-City</p>
+                  <p className="text-sm text-black flex-1">Access to exclusive investment opportunities in Gujarat International Finance Tec-City</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">Retirement Planning</h4>
-                  <p className="text-sm text-black">Long-term investment strategies for a secure and comfortable retirement</p>
+                  <p className="text-sm text-black flex-1">Long-term investment strategies for a secure and comfortable retirement</p>
                 </div>
               </div>
             </div>
@@ -548,24 +548,24 @@ export default function HomePage() {
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">Will Drafting (India & Cross-Border)</h4>
-                  <p className="text-sm text-black">Legally sound wills that are valid across multiple jurisdictions and compliant with local laws</p>
+                  <p className="text-sm text-black flex-1">Legally sound wills that are valid across multiple jurisdictions and compliant with local laws</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">Power of Attorney Guidance</h4>
-                  <p className="text-sm text-black">Expert advice on setting up and managing POAs for your assets and affairs in India</p>
+                  <p className="text-sm text-black flex-1">Expert advice on setting up and managing POAs for your assets and affairs in India</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">Nomination & Beneficiary Planning</h4>
-                  <p className="text-sm text-black">Strategic nomination planning for all your financial assets and investment accounts</p>
+                  <p className="text-sm text-black flex-1">Strategic nomination planning for all your financial assets and investment accounts</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">Professional Executor Services</h4>
-                  <p className="text-sm text-black">Reliable and professional execution of your will and comprehensive estate plans</p>
+                  <p className="text-sm text-black flex-1">Reliable and professional execution of your will and comprehensive estate plans</p>
                 </div>
               </div>
             </div>
@@ -586,24 +586,24 @@ export default function HomePage() {
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">PAN Card Application/Update</h4>
-                  <p className="text-sm text-black">Hassle-free PAN card services for NRIs including new applications and updates</p>
+                  <p className="text-sm text-black flex-1">Hassle-free PAN card services for NRIs including new applications and updates</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">OCI Card & Passport Renewal</h4>
-                  <p className="text-sm text-black">Complete assistance with OCI applications and Indian passport renewals</p>
+                  <p className="text-sm text-black flex-1">Complete assistance with OCI applications and Indian passport renewals</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">NRE/NRO Bank Account Opening</h4>
-                  <p className="text-sm text-black">Streamlined process for opening and managing NRI bank accounts</p>
+                  <p className="text-sm text-black flex-1">Streamlined process for opening and managing NRI bank accounts</p>
                 </div>
                 
-                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200">
+                <div className="bg-white p-6 rounded-xl hover:bg-yellow-50 transition-colors border border-yellow-200 h-full flex flex-col">
                   <h4 className="font-semibold text-black mb-3">Document Legalization</h4>
-                  <p className="text-sm text-black">Authentication and legalization of documents for cross-border use</p>
+                  <p className="text-sm text-black flex-1">Authentication and legalization of documents for cross-border use</p>
                 </div>
               </div>
             </div>

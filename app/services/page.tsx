@@ -141,11 +141,11 @@ export default function ServicesPage() {
       {/* Core Services */}
       <section className="px-6 py-16">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
             {[
               {
                 icon: Globe,
-                title: "Property Management ",
+                title: "Property Management",
                 description: "Comprehensive property management addressing critical issues like illegal possession, encroachment, and title disputes - major sources of stress and financial loss for NRIs",
                 features: [
                   "Property Dispute Resolution & Legal Assistance",
@@ -170,6 +170,20 @@ export default function ServicesPage() {
                   "TDS Management & Refund Processing"
                 ],
                 highlighted: true
+              },
+              {
+                icon: Users,
+                title: "Estate Planning & Family Support",
+                description: "Critical succession planning and family support services ensuring smooth asset transfer and addressing significant emotional needs of NRI families",
+                features: [
+                  "Will Drafting (India & Cross-Border)",
+                  "Power of Attorney (POA) Guidance & Execution", 
+                  "Nomination & Beneficiary Planning",
+                  "Professional Executor Services",
+                  "Health & Personal Care for Family Members",
+                  "Medical Emergency Coordination"
+                ],
+                highlighted: true
               }
             ].map((service, index) => (
               <FadeInUp key={index} delay={index * 0.1}>
@@ -192,57 +206,6 @@ export default function ServicesPage() {
                 </div>
               </FadeInUp>
             ))}
-          </div>
-
-          {/* Estate Planning & Family Support */}
-          <div className="mb-12">
-            <FadeInUp>
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300 rounded-xl p-8 shadow-lg">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8 text-yellow-600" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">Estate Planning & Family Support</h3>
-                <p className="text-gray-600 mb-6">
-                  Critical succession planning and family support services ensuring smooth asset transfer and addressing significant emotional needs of NRI families.
-                </p>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-3">Estate Planning & Succession</h4>
-                    <ul className="space-y-2">
-                      {[
-                        "Will Drafting (India & Cross-Border)",
-                        "Power of Attorney (POA) Guidance & Execution", 
-                        "Nomination & Beneficiary Planning",
-                        "Professional Executor Services"
-                      ].map((feature, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-800 mb-3">Family Support & Emergency Assistance</h4>
-                    <ul className="space-y-2">
-                      {[
-                        "Health & Personal Care for Family Members",
-                        "Financial Management for Dependents", 
-                        "Medical Emergency Coordination",
-                        "Elder Care & Regular Check-ins"
-                      ].map((feature, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-gray-700">
-                          <CheckCircle className="w-4 h-4 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </FadeInUp>
           </div>
         </div>
       </section>
@@ -290,18 +253,18 @@ export default function ServicesPage() {
               }
             ].map((service, index) => (
               <FadeInUp key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
                   <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
                     <service.icon className="w-8 h-8 text-yellow-600" />
                   </div>
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4 flex-1">{service.description}</p>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
                   {service.challenge && (
                     <div className="bg-orange-50 border-l-4 border-orange-400 p-4 mb-4">
                       <p className="text-sm text-orange-800 font-medium">{service.challenge}</p>
                     </div>
                   )}
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 flex-1">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-sm text-gray-700">
                         <CheckCircle className="w-4 h-4 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -352,12 +315,12 @@ export default function ServicesPage() {
               }
             ].map((service, index) => (
               <FadeInUp key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col">
                   <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-yellow-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{service.title}</h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 flex-1">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start text-sm text-gray-700">
                         <CheckCircle className="w-3 h-3 text-yellow-500 mr-2 mt-1 flex-shrink-0" />

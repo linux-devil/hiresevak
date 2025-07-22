@@ -165,28 +165,16 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative"
+            className="relative flex items-center justify-center"
           >
-            <div className="relative bg-white rounded-lg shadow-2xl overflow-hidden">
+            <div className="relative">
               <Image
-                src="/dashboard-mockup.png"
-                alt="Sevak NRI Tax & Compliance Dashboard"
+                src="/services-hero.png"
+                alt="Sevak Services - Tax Filing, Estate Planning, Document Procurement, USD Deposits"
                 width={600}
-                height={400}
-                className="w-full h-auto"
+                height={450}
+                className="w-full h-auto max-w-md mx-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg p-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-gray-600">Concierge Dashboard</p>
-                    <p className="text-lg font-bold text-yellow-600">15 Tasks • All On Track</p>
-                  </div>
-                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
-                    <TrendingUp className="w-6 h-6 text-yellow-600" />
-                  </div>
-                </div>
-              </div>
             </div>
 
             <motion.div
@@ -550,7 +538,7 @@ export default function HomePage() {
             <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-yellow-200 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center gap-6 mb-6">
                 <div className="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center flex-shrink-0">
-                  <FileText className="w-10 h-10 text-black" />
+                  <img src="/estate-planning.svg" alt="Estate Planning & Succession" className="w-10 h-10" />
                 </div>
                 <h3 className="text-3xl font-bold text-black">Estate Planning & Succession</h3>
               </div>

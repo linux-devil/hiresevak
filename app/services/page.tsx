@@ -172,7 +172,7 @@ export default function ServicesPage() {
                 highlighted: true
               },
               {
-                icon: Users,
+                icon: "estate-planning",
                 title: "Estate Planning & Family Support",
                 description: "Critical succession planning and family support services ensuring smooth asset transfer and addressing significant emotional needs of NRI families",
                 features: [
@@ -190,7 +190,11 @@ export default function ServicesPage() {
                 <div className={`${service.highlighted ? 'bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-300' : 'bg-white'} rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col`}>
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-16 h-16 ${service.highlighted ? 'bg-yellow-100' : 'bg-gray-100'} rounded-full flex items-center justify-center`}>
-                      <service.icon className={`w-8 h-8 ${service.highlighted ? 'text-yellow-600' : 'text-gray-600'}`} />
+                      {typeof service.icon === 'string' ? (
+                        <img src={`/${service.icon}.svg`} alt={service.title} className={`w-8 h-8 ${service.highlighted ? 'text-yellow-600' : 'text-gray-600'}`} />
+                      ) : (
+                        <service.icon className={`w-8 h-8 ${service.highlighted ? 'text-yellow-600' : 'text-gray-600'}`} />
+                      )}
                     </div>
                   </div>
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">{service.title}</h3>

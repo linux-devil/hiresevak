@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { createPortal } from "react-dom"
 import { Button } from "@/components/ui/button"
 import { X, ArrowRight, ArrowLeft, Check } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -202,13 +203,13 @@ export function QuestionnaireModal({ isOpen, onClose }: QuestionnaireModalProps)
 
   const progress = ((currentStep + 1) / totalSteps) * 100
 
-  return (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+  const modalContent = (
+    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999] p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.9 }}
-        className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
+        className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-hidden"
       >
         {/* Progress bar */}
         <div className="h-2 bg-gray-200">
@@ -230,7 +231,7 @@ export function QuestionnaireModal({ isOpen, onClose }: QuestionnaireModalProps)
           <X className="w-5 h-5" />
         </Button>
 
-        <div className="p-8">
+        <div className="p-8 overflow-y-auto max-h-[calc(85vh-2rem)]">
           <AnimatePresence mode="wait">
             {isCompleted ? (
               <motion.div
@@ -439,4 +440,9 @@ export function QuestionnaireModal({ isOpen, onClose }: QuestionnaireModalProps)
       </motion.div>
     </div>
   )
+
+  // Render modal in a portal to ensure it appears at the document level
+  return typeof document !== 'undefined' 
+    ? createPortal(modalContent, document.body)
+    : null
 }

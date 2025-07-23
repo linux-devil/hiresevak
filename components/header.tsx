@@ -4,9 +4,11 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, Menu, X } from "lucide-react"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { QuestionnaireModal } from "@/components/questionnaire-modal"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [showQuestionnaire, setShowQuestionnaire] = useState(false)
 
   return (
     <header className="px-6 py-4 relative z-50 bg-white/80 backdrop-blur-sm border-b">
@@ -31,7 +33,10 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button className="bg-yellow-500 text-black hover:bg-yellow-600 font-medium transition-colors">
+          <Button 
+            onClick={() => setShowQuestionnaire(true)}
+            className="bg-yellow-500 text-black hover:bg-yellow-600 font-medium transition-colors"
+          >
             Get Started
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
@@ -65,6 +70,11 @@ export function Header() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <QuestionnaireModal 
+        isOpen={showQuestionnaire} 
+        onClose={() => setShowQuestionnaire(false)} 
+      />
     </header>
   )
 }

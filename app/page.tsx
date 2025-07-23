@@ -6,11 +6,14 @@ import { Globe, Shield, TrendingUp, Users, ArrowRight, Play, FileText, User } fr
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FadeInUp, SlideInLeft } from "@/components/scroll-animation"
+import { QuestionnaireModal } from "@/components/questionnaire-modal"
 import { motion } from "framer-motion"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 
 export default function HomePage() {
+  const [showQuestionnaire, setShowQuestionnaire] = useState(false)
+
   useEffect(() => {
     // Calculator functionality
     const updateCalculation = (amount: number, years: number) => {
@@ -146,16 +149,12 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex gap-4"
               >
-                <Button className="bg-yellow-500 text-black hover:bg-yellow-600 font-medium px-8 py-3">
+                <Button 
+                  onClick={() => setShowQuestionnaire(true)}
+                  className="bg-yellow-500 text-black hover:bg-yellow-600 font-medium px-8 py-3"
+                >
                   Start Your Journey
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-gray-900 text-gray-900 hover:bg-gray-100 px-8 py-3 bg-transparent"
-                >
-                  <Play className="mr-2 h-4 w-4" />
-                  Watch Demo
                 </Button>
               </motion.div>
             </div>
@@ -641,6 +640,11 @@ export default function HomePage() {
 
 
       <Footer />
+
+      <QuestionnaireModal 
+        isOpen={showQuestionnaire} 
+        onClose={() => setShowQuestionnaire(false)} 
+      />
     </div>
   )
 }

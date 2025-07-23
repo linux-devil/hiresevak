@@ -1,12 +1,16 @@
 "use client"
 
+import { useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FadeInUp, SlideInLeft } from "@/components/scroll-animation"
+import { QuestionnaireModal } from "@/components/questionnaire-modal"
 import { Button } from "@/components/ui/button"
 import { Users, Target, Lightbulb, Award } from "lucide-react"
 
 export default function AboutPage() {
+  const [showQuestionnaire, setShowQuestionnaire] = useState(false)
+
   return (
     <div className="min-h-screen bg-[#f5f3f0]">
       <Header />
@@ -15,7 +19,7 @@ export default function AboutPage() {
       <section className="px-6 py-24">
         <div className="max-w-4xl mx-auto text-center">
           <FadeInUp>
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">About mySevak</h1>
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">About Sevak</h1>
             <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
               We're bridging the geographical distance for Non-Resident Indians through comprehensive remote 
               concierge services that handle all your Indian affairs with professional expertise and digital efficiency.
@@ -26,42 +30,18 @@ export default function AboutPage() {
 
       {/* Mission Section */}
       <section className="px-6 py-16 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <SlideInLeft>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                To eliminate the substantial time and effort NRIs face in managing their Indian affairs by providing 
-                comprehensive remote concierge services that bridge geographical distance with professional expertise.
-              </p>
-              <p className="text-lg text-gray-700">
-                We believe that NRIs should focus on their life abroad without worrying about their interests in India. That's why we've
-                created a comprehensive platform that handles everything from property management to tax compliance remotely.
-              </p>
-            </SlideInLeft>
-            <FadeInUp delay={0.2}>
-              <div className="bg-[#c4f82a] rounded-2xl p-8">
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <div className="text-3xl font-bold text-gray-900">100%</div>
-                    <div className="text-gray-700">Remote Service</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-gray-900">24/7</div>
-                    <div className="text-gray-700">Support Available</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-gray-900">500K+</div>
-                    <div className="text-gray-700">Tasks Completed</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-gray-900">50+</div>
-                    <div className="text-gray-700">Service Types</div>
-                  </div>
-                </div>
-              </div>
-            </FadeInUp>
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <FadeInUp>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <p className="text-lg text-gray-700 mb-6">
+              To eliminate the substantial time and effort NRIs face in managing their Indian affairs by providing 
+              comprehensive remote concierge services that bridge geographical distance with professional expertise.
+            </p>
+            <p className="text-lg text-gray-700">
+              We believe that NRIs should focus on their life abroad without worrying about their interests in India. That's why we've
+              created a comprehensive platform that handles everything from property management to tax compliance remotely.
+            </p>
+          </FadeInUp>
         </div>
       </section>
 
@@ -116,14 +96,24 @@ export default function AboutPage() {
           <FadeInUp>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to experience true peace of mind?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of NRIs who trust mySevak as their comprehensive remote concierge for all Indian affairs.
+              Join thousands of NRIs who trust Sevak as their comprehensive remote concierge for all Indian affairs.
             </p>
-            <Button className="bg-[#c4f82a] text-gray-900 hover:bg-[#b8e625] font-medium px-8 py-3">Start Your Journey</Button>
+            <Button 
+              onClick={() => setShowQuestionnaire(true)}
+              className="bg-[#c4f82a] text-gray-900 hover:bg-[#b8e625] font-medium px-8 py-3"
+            >
+              Start Your Journey
+            </Button>
           </FadeInUp>
         </div>
       </section>
 
       <Footer />
+
+      <QuestionnaireModal 
+        isOpen={showQuestionnaire} 
+        onClose={() => setShowQuestionnaire(false)} 
+      />
     </div>
   )
 }
